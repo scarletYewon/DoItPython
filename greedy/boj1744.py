@@ -38,9 +38,10 @@ while minusPq.qsize()>1:
   second = minusPq.get()
   sum += first*second
 
-# 음수큐의 큐사이즈가 1개이면 그냥 더해줌
+# 음수큐의 큐사이즈가 1개이면 0개수 확인해보고 더해줌
 if minusPq.qsize()>0:
-  sum+= minusPq.get()
+  if zero == 0:
+    sum+= minusPq.get()
 
 # 1처리
 sum += one
